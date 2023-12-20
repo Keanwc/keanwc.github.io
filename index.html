@@ -1,134 +1,262 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-.name {
-    color: white;
-}
-</style>
-<body class="w3-light-grey">
+<head lang="en">
+    <meta charset="UTF-8">
 
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+    <!--Page Title-->
+    <title>Balance Technology</title>
 
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="data:image/jpeg;base64,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" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2 class="name">Kean Wong</h2>
-          </div>
-        </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Software engineer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Singapore</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>keanwc@gmail.com</p>
-          <!-- <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i></p> -->
-          <hr>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-         
-          <p>Back-End (ASP.NET)</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">
-              <div class="w3-center w3-text-white">90%</div>
-            </div>
-          </div>
-          <p>Desktop app (WPF)</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
-              <div class="w3-center w3-text-white">80%</div>
-            </div>
-          </div>
-          <p>Database (SQLServer)</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:65%">65%</div>
-          </div>
-          <p>Front-End web (Angular)</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-          </div>
-          <br>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico" title="Favicon"/>
 
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-          <p>c#, Java</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-          </div>
-          <p>SQL</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:75%"></div>
-          </div>
-          <p>HTML, TypeScript</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:65%"></div>
-          </div>
-          <br>
-        </div>
-      </div><br>
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- End Left Column -->
+    <!-- Namari Color CSS -->
+    <link rel="stylesheet" href="css/namari-color.css">
+
+    <!--Icon Fonts - Font Awesome Icons-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Animate CSS-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+    <!--Google Webfonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
+</div>
+<!--End of Preloader-->
 
-    <!-- Right Column -->
-    <div class="w3-twothird">
-    
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Full stack developer</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2018 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>Responsible in developing desktop and web applications. Also participate in software design.</p>
-          <hr>
-        </div>
-      </div>
-
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Murdoch University</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015 - 2017</h6>
-          <p>Bachelor degree in Computer science & Mobile Web App Dev</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>South West Institute of Technology</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2014</h6>
-          <p>Diploma in Information System and Networking</p>
-          <hr>
-        </div>
-      </div>
-
-    <!-- End Right Column -->
-    </div>
-    
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
+<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
 </div>
 
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <!-- <p>Find me on social media.</p>
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>s
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i> -->
-</footer>
+<div id="wrapper">
+
+    <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <!--Logo-->
+                    <div id="logo">
+
+                        <!--Logo that is shown on the banner-->
+                        <img src="images/logo.png" id="banner-logo" alt="Landing Page"/>
+                        <!--End of Banner Logo-->
+
+                        <!--The Logo that is shown on the sticky Navigation Bar-->
+                        <img src="images/logo-2.png" id="navigation-logo" alt="Landing Page"/>
+                        <!--End of Navigation Logo-->
+
+                    </div>
+                    <!--End of Logo-->
+
+                    <aside>
+
+                        <!--Social Icons in Header-->
+                        <!-- <ul class="social-icons">
+                            <li>
+                                <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
+                                    <i class="fa fa-facebook fa-1x"></i><span>Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Google+" href="http://google.com/+username">
+                                    <i class="fa fa-google-plus fa-1x"></i><span>Google+</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Twitter" href="http://www.twitter.com/username">
+                                    <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="Instagram" href="http://www.instagram.com/username">
+                                    <i class="fa fa-instagram fa-1x"></i><span>Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="behance" href="http://www.behance.net">
+                                    <i class="fa fa-behance fa-1x"></i><span>Behance</span>
+                                </a>
+                            </li>
+                        </ul> -->
+                        <!--End of Social Icons in Header-->
+
+                    </aside>
+
+                    <!--Main Navigation-->
+                    <nav id="nav-main">
+                        <ul>
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="mailto:ck@batech.com.au">Email</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="#services">Services</a>
+                            </li>
+                            <li>
+                                <a href="#testimonials">Testimonials</a>
+                            </li>
+                            <li>
+                                <a href="#clients">Clients</a>
+                            </li>
+                            <li>
+                                <a href="#pricing">Pricing</a>
+                            </li> -->
+                        </ul>
+                    </nav>
+                    <!--End of Main Navigation-->
+
+                    <div id="nav-trigger"><span></span></div>
+                    <nav id="nav-mobile"></nav>
+
+                </div>
+            </div>
+        </div><!--End of Header-->
+
+        <!--Banner Content-->
+        <div id="banner-content" class="row clearfix">
+
+            <div class="col-38">
+
+                <div class="section-heading">
+                    <h1>Empowering Your Digital Transformation</h1>
+                    <h2>Balance Technology offers technology solutions that help you to complete your tasks efficiently.</h2>
+                </div>
+
+                <!--Call to Action-->
+                <!-- <a href="#" class="button">START CREATING TODAY</a> -->
+                <!--End Call to Action-->
+
+            </div>
+
+        </div><!--End of Row-->
+    </header>
+
+    <!--Main Content Area-->
+    <main id="content">
+
+        <!--Introduction-->
+        <section id="about" class="introduction scrollto">
+
+            <div class="row clearfix">
+
+                <div class="col-3">
+                    <div class="section-heading">
+                        <h3>SUCCESS</h3>
+                        <h2 class="section-title">Who We Are</h2>
+                        <p class="section-subtitle">Balance Technology is a technology solutions provider that specializes in developing customized web and desktop applications, providing IT consultation, and offering ad-hoc IT services such as IT hardware troubleshooting, maintenance, and backup. Balance Technology is dedicated to helping our clients achieve their business goals by leveraging the power of technology.</p>
+                    </div>
+
+                </div>
+
+                <div class="col-2-3">
+
+                    <!--Icon Block-->
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
+                        <!--Icon-->
+                        <div class="icon">
+                            <i class="fa fa-html5 fa-2x"></i>
+                        </div>
+                        <!--Icon Block Description-->
+                        <div class="icon-block-description">
+                            <h4>Custom App Development</h4>
+                            <p>Balance Technology develops customized web and desktop applications that are secure and easy to use.</p>
+                        </div>
+                    </div>
+                    <!--End of Icon Block-->
+
+                    <!--Icon Block-->
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.3s">
+                        <!--Icon-->
+                        <div class="icon">
+                            <i class="fa fa-bolt fa-2x"></i>
+                        </div>
+                        <!--Icon Block Description-->
+                        <div class="icon-block-description">
+                            <h4>IT Support</h4>
+                            <p>We offer ad-hoc IT services such as IT hardware troubleshooting, maintenance, and backup to ensure the smooth operation of your technology infrastructure.</p>
+                        </div>
+                    </div>
+                    <!--End of Icon Block-->
+
+                    <!--Icon Block-->
+                    <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
+                        <!--Icon-->
+                        <div class="icon">
+                            <i class="fa fa-tablet fa-2x"></i>
+                        </div>
+                        <!--Icon Block Description-->
+                        <div class="icon-block-description">
+                            <h4>IT Consultation</h4>
+                            <p>Balance Technology provides expert IT consultation to help you optimize your technology infrastructure and leverage new technologies to drive business growth.</p>
+                        </div>
+                    </div>
+                    <!--End of Icon Block-->
+
+                    <!-- <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="icon">
+                            <i class="fa fa-rocket fa-2x"></i>
+                        </div>
+                        <div class="icon-block-description">
+                            <h4>Parallax Effect</h4>
+                            <p>Id porro tritani recusabo usu, eum intellegam consequuntur et. Fugit debet ea sit, an pro
+                                nemore vivendum</p>
+                        </div>
+                    </div> -->
+
+                </div>
+
+            </div>
+
+
+        </section>
+        <!--End of Introduction-->
+
+    </main>
+    <!--End Main Content Area-->
+
+
+</div>
+
+<!-- Include JavaScript resources -->
+<script src="js/jquery.1.8.3.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/featherlight.min.js"></script>
+<script src="js/featherlight.gallery.min.js"></script>
+<script src="js/jquery.enllax.min.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.stickyNavbar.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/images-loaded.min.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/site.js"></script>
+
 
 </body>
 </html>
-
